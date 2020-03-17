@@ -12,7 +12,7 @@ def directors_totals(nds)
   result = {
     
   }
-  
+
   # Use loops, variables and the accessing method, [], to loop through the NDS
   # and total up all the
   director_index = 0
@@ -20,11 +20,11 @@ def directors_totals(nds)
     director_name = nds[director_index][:name]
     result[director_name] = 0
     movie_index = 0
+    #binding.pry
     while movie_index < nds[director_index][:movies].length do
       result[director_name] += nds[director_index][:movies][movie_index][:worldwide_gross]
       movie_index += 1
     end
-    #binding.pry
     director_index += 1
   end
   result
